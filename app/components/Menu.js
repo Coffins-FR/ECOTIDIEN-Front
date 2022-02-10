@@ -1,7 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const Menu = ({toggle, open}) => {
+    const router = useRouter()
+    const pathname  = router.pathname
 
     return (
         <>
@@ -12,11 +15,13 @@ const Menu = ({toggle, open}) => {
                         </svg>
                     </div>
                     <section className='flex flex-col justify-evenly h-32 text-xl font-semibold'>
-                        <div className='place-self-center'>
+                        <div className='place-self-center flex items-center'>
                             <Link href="/recettes">Recettes</Link>
+                            {pathname === "/recettes" && <div className='rounded-full h-3 w-3 ml-4 bg-emerald-800'></div>}
                         </div>
-                        <div className='place-self-center'>
-                            <Link href="/a-propos">A propos</Link>
+                        <div className='place-self-center flex items-center'>
+                            <Link href="/a-propos">Recettes</Link>
+                            {pathname === "/a-propos" && <div className='rounded-full h-3 w-3 ml-4 bg-emerald-800'></div>}
                         </div>
                     </section>
                 </div>

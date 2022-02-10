@@ -9,7 +9,7 @@ module.exports = {
     screens: {
       xsm: '1px',
       sm: '640px',
-      md: '768px',
+      md: '769px',
       lg: '1024px',
       xl: '1280px',
       '2xl': '1536px',
@@ -107,6 +107,9 @@ module.exports = {
       72: '18rem',
       80: '20rem',
       96: '24rem',
+      112: '28rem',
+      136: '32rem',
+      152: '38rem',
     },
     animation: {
       none: 'none',
