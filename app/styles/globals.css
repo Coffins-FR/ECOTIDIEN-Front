@@ -18,3 +18,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/* .image-container .span{
+  overflow: visible !important;
+}
+
+.image-container  .img {
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.15);
+} */

@@ -2,22 +2,29 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-const Cards = ({img, title, time, author,}) => {
+const Cards = ({img, title, time, author_name, author_surname, date, slug, short_desc}) => {
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const event = new Date(date)
   return (
-    <section className='flex flex-col md:flex-row w-80 h-40 rounded-md shadow-lg hover:blur-sm hover:scale-105 transition duration-700 ease-in-out mt-4 md:m-0'>
-        <div className='relative'>
-            <div className='w-full h-40 absolute rounded-md top-0 left-0 z-10 bg-gradient-to-t from-slate-800 opacity-60 '></div>
-            <div className='w-full h-40 absolute p-4 flex flex-col-reverse top-0 left-0 justify-start z-20 text-white'>
-                <p className='justify-self-end text-sm '>
-                    <span className='underline'>Préparation :</span> {time} min
-                </p>
-                <p className='justify-self-end text-lg font-semibold'>
-                    {title}
-                </p>
-            </div>
-            <div className='w-full h-40 top-0 left-0 z-0 rounded-md'>
-                <Image className='rounded-md' src={'https:'+img} width='320' height='160' layout='intrinsic'/>
-            </div>
+    <section className='flex flex-col-reverse p-5 sm:p-0 w-full md:w-2/5 h-136 mt-4 md:m-0 rounded-lg'>
+        <section className='h-full flex flex-col'>
+          <div className='hover:underline text-2xl font-semibold pr-3'>
+            <Link className='hover:underline text-2xl' href={'/recettes/'+slug}>{title}</Link>
+          </div>
+          <div className='text-md h-5 font-light mt-4'>
+            <p>{event.toLocaleDateString(undefined, options)}</p>
+          </div>
+          <div className='text-md mt-4'>
+            <p>{short_desc}</p>
+          </div>
+          <div className='mt-4'>
+            <p className='font-extralight text-gray-500'>Auteur: {author_surname} {author_name}</p>
+          </div>
+        </section>
+        <div className='rounded-md transition ease-in-out duration-700 hover:blur-sm'>
+          <Link className='' href={'/recettes/'+slug}>
+              <Image  src={'https:'+img} width={600} height={250} className='rounded-md' objectFit='cover'/>
+          </Link>
         </div>
     </section>
   )
