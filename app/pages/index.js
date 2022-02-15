@@ -33,7 +33,7 @@ const Recettes = ({recipes}) => {
           <meta name="description" content="application ecotidien le marmitton du du zéro déchet" />
           <link rel="icon" href="/logo.png" />
         </Head>
-        <div className='lg:w-3/5 h-full sm:px-4 lg:px-0 w-full justify-self-center grid gap-y-36'>
+        <div className='lg:w-3/5 h-full sm:px-4 lg:px-0 w-full justify-self-center grid md:gap-y-24'>
             {
               <div className='row-span-1 w-full h-3/5'>
                 <Hero 

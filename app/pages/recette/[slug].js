@@ -75,8 +75,10 @@ const Recipe = ({recipe}) => {
           </ul>
         </div>
         <div className='row-span-1 md:col-span-1'>
-          <h2 className='text-xl font-bold'>Temps de préparation</h2>
-          <p>{recipe.cookingTime} minutes</p>
+          <div className='h-full flex flex-col justify-center md:block'>
+            <h2 className='text-xl font-bold'>Temps de préparation</h2>
+            <p>{recipe.cookingTime} minutes</p>
+          </div>
         </div>
       </section>
       <section className='w-full lg:w-3/5 p-5'>
