@@ -47,7 +47,7 @@ const Navbar = () => {
         </div>
         :
         <div className='w-full h-24 lg:h-32 flex justify-center'>
-          <div className='w-full md:w-3/5 h-full px-3 flex flex-row justify-between place-items-center items-center'>
+          <div className='w-full lg:w-3/5 h-full px-3 flex flex-row justify-between place-items-center items-center'>
             <Link href={'/'}>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
