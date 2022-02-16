@@ -12,7 +12,6 @@ const Navbar = () => {
       setOpen(!isOpen);
   }
   const str = 'recette'
-  console.log(pathname.includes(str))
   return (
     <header className='w-screen'>
       {pathname.includes(str) === false ?
