@@ -23,7 +23,7 @@ export async function getStaticPaths() {
     })
     return {
       paths,
-      fallback : false
+      fallback : true
     }
 }
 
@@ -39,7 +39,7 @@ export async function getStaticProps({params}){
   }
 }
 const Recipe = ({recipe}) => {
-  console.log(recipe)
+  if(!recipe) return <div>loading</div>
   recipe.ingredients.map(elem => console.log(elem))
 
   const ingredients = recipe.ingredients.map((element,i) => {
