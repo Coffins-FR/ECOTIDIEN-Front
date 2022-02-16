@@ -67,7 +67,7 @@ const Recipe = ({recipe}) => {
           <Image className='rounded-xl' src={'https:'+recipe.cover.fields.file.url} width={1024} height={512} layout='responsive' objectFit='cover'/>
         </div>
       </section>
-      <section className='w-full lg:w-3/5 h-80 lg:h-36 p-5 grid grid-rows-2 md:grid-rows-none md:grid-cols-2 mt-5'>
+      <section className='w-full lg:w-3/5 p-5 grid grid-rows-2 md:grid-rows-none md:grid-cols-2 mt-5'>
         <div className='row-span-1 md:col-span-1'>
           <h2 className='text-xl font-bold'>Ingrédients</h2>
           <ul className='list-disc pl-8'>
